@@ -11,20 +11,20 @@
 > The end result should follow the following data model (this is an Entity Relationship Diagram that you are already familiar with):
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/microverseinc/curriculum-rails/main/blog-app/images/blog_app_erd.png?token=GHSAT0AAAAAABQBCGV5YUGXVETFUVPDQYV2YXSSMDQ" alt="Data model"  width="500px"  />
+  <img src="https://raw.githubusercontent.com/microverseinc/curriculum-rails/main/blog-app/images/blog_app_erd.png?token=GHSAT0AAAAAABQBCGV5RHK6UX2YPSVEDINYYXSVZEA" alt="Data model"  width="500px"  />
 </p>
 
 For this project you will have full freedom in terms of visual design but you will need to keep the following wireframes:
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/microverseinc/curriculum-rails/main/blog-app/images/blog_login.png?token=GHSAT0AAAAAABQBCGV5SFIIURKDY6Z4ZKH6YXSSM6Q" alt="Login page wireframe" width="250px" />
-  <img src="https://raw.githubusercontent.com/microverseinc/curriculum-rails/main/blog-app/images/blog_root_users.png?token=GHSAT0AAAAAABQBCGV4RTK2NVLAWQ2KPXDCYXSSNUQ" alt="Single post page wireframe" alt="All users page wireframe"  width="250px"  />
-  <img src="https://raw.githubusercontent.com/microverseinc/curriculum-rails/main/blog-app/images/blog_user_page.png?token=GHSAT0AAAAAABQBCGV4FH7Y2ZMGPNLTJYYKYXSSPYA" alt="Single user page wireframe"  width="250px"  />
+  <img src="https://raw.githubusercontent.com/microverseinc/curriculum-rails/main/blog-app/images/blog_login.png?token=GHSAT0AAAAAABQBCGV4BITTIVKHST2HWTDSYXSV2CQ" alt="Login page wireframe" width="250px" />
+  <img src="https://raw.githubusercontent.com/microverseinc/curriculum-rails/main/blog-app/images/blog_root_users.png?token=GHSAT0AAAAAABQBCGV5IENWYO4ZGAQYBIDUYXSV2NA" alt="Single post page wireframe" alt="All users page wireframe"  width="250px"  />
+  <img src="https://raw.githubusercontent.com/microverseinc/curriculum-rails/main/blog-app/images/blog_user_page.png?token=GHSAT0AAAAAABQBCGV4I2TXOWYU4M54KAXCYXSV24A" alt="Single user page wireframe"  width="250px"  />
 </p>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/microverseinc/curriculum-rails/main/blog-app/images/blog_user_all_posts.png?token=GHSAT0AAAAAABQBCGV5BU543RCUFOMFYEBCYXSSQOQ" alt="All posts by a given user page wireframe"  width="250px"  />
-  <img src="https://raw.githubusercontent.com/microverseinc/curriculum-rails/main/blog-app/images/blog_single_post.png?token=GHSAT0AAAAAABQBCGV4WLK3HZPQCB24Z6VOYXSSRFA" alt="Single post page wireframe"  width="250px"  />
+  <img src="https://raw.githubusercontent.com/microverseinc/curriculum-rails/main/blog-app/images/blog_user_all_posts.png?token=GHSAT0AAAAAABQBCGV5E2HE2BLHWAQJAIHKYXSV3OQ" alt="All posts by a given user page wireframe"  width="250px"  />
+  <img src="https://raw.githubusercontent.com/microverseinc/curriculum-rails/main/blog-app/images/blog_single_post.png?token=GHSAT0AAAAAABQBCGV4I5FZUXUJL5H7NXPGYXSV36Q" alt="Single post page wireframe"  width="250px"  />
 </p>
 
 > You will be guided step by step, and because of that you will have a chance to practice your knowledge about basic Ruby on Rails concepts - starting from the Views and finishing the database connection. You will also implement ideas like authentication, authorization, and all kinds of tests. In the last step, you will have a chance to create an API instead of API consumption.
