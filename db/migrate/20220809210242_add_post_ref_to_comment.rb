@@ -1,5 +1,0 @@
-class AddPostRefToComment < ActiveRecord::Migration[7.0]
-  def change
-    add_reference :comments, :post, null: false, foreign_key: true, index: true, on_delete: :cascade
-  end
-end
