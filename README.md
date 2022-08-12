@@ -11,20 +11,20 @@
 > The end result should follow the following data model (this is an Entity Relationship Diagram that you are already familiar with):
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/microverseinc/curriculum-rails/main/blog-app/images/blog_app_erd.png?token=GHSAT0AAAAAABQBCGV52BR7YIL3FHCAICN4YXV5RPA" alt="Data model"  width="500px"  />
+  <img src="./app/assets/images/1-blog_app_erd.png" alt="Data model"  width="500px"  />
 </p>
 
 For this project you will have full freedom in terms of visual design but you will need to keep the following wireframes:
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/microverseinc/curriculum-rails/main/blog-app/images/blog_login.png?token=GHSAT0AAAAAABQBCGV5N5S5ESN3IXY4HQFEYXV5R4Q" alt="Login page wireframe" width="250px" />
-  <img src="https://raw.githubusercontent.com/microverseinc/curriculum-rails/main/blog-app/images/blog_root_users.png?token=GHSAT0AAAAAABQBCGV5JZBCNRXAZWGLCOQMYXV5SKQ" alt="Single post page wireframe" alt="All users page wireframe"  width="250px"  />
-  <img src="https://raw.githubusercontent.com/microverseinc/curriculum-rails/main/blog-app/images/blog_user_page.png?token=GHSAT0AAAAAABQBCGV4UAXRHRRSETK3NQHYYXV5TNA" alt="Single user page wireframe"  width="250px"  />
+  <img src="app/assets/images/2-blog_login.png" alt="Login page wireframe" width="250px" />
+  <img src="app/assets/images/3-blog_root_users.png" alt="Single post page wireframe" alt="All users page wireframe"  width="250px"  />
+  <img src="app/assets/images/4-blog_user_page.png" alt="Single user page wireframe"  width="250px"  />
 </p>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/microverseinc/curriculum-rails/main/blog-app/images/blog_user_all_posts.png?token=GHSAT0AAAAAABQBCGV55OLTPLQET73AX6S2YXV5UEA"  width="250px"  />
-  <img src="https://raw.githubusercontent.com/microverseinc/curriculum-rails/main/blog-app/images/blog_single_post.png?token=GHSAT0AAAAAABQBCGV4U6EGE4R4ISAFYJUKYXV5UUQ" alt="Single post page wireframe"  width="250px"  />
+  <img src="app/assets/images/5-blog_user_all_posts.png"  width="250px"  />
+  <img src="app/assets/images/6-blog_single_post.png" alt="Single post page wireframe"  width="250px"  />
 </p>
 
 > You will be guided step by step, and because of that you will have a chance to practice your knowledge about basic Ruby on Rails concepts - starting from the Views and finishing the database connection. You will also implement ideas like authentication, authorization, and all kinds of tests. In the last step, you will have a chance to create an API instead of API consumption.
