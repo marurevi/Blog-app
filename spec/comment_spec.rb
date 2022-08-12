@@ -1,9 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe Comment do
-  let(:user) { User.create(name: 'name', photo: 'photo', bio: 'bio')}
-  let(:post) { Post.create(author: user, title: 'title', text: 'post text') }
-  let(:comment) { Comment.create(author: user, post: post, text: 'comment text') }
+  let(:user) { User.new(name: 'name', photo: 'photo', bio: 'bio')}
+  let(:post) { Post.new(author: user, title: 'title', text: 'post text') }
+  let(:comment) { Comment.new(author: user, post: post, text: 'comment text') }
 
   context 'When testing the Comment class' do
     before do

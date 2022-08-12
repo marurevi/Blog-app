@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe Post do
   let(:user) { User.new(name: 'John Doe', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Teacher from Canada.')}
-  let(:post) { Post.create(author: user, title: 'title', text: 'text') }
+  let(:post) { Post.new(author: user, title: 'title', text: 'text') }
     
   before { post.save }
 
