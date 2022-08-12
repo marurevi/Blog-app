@@ -1,9 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe Post do
-  let(:user) { User.new(name: 'John Doe', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Teacher from Canada.')}
+  let(:user) { User.new(name: 'John Doe', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Teacher from Canada.') }
   let(:post) { Post.new(author: user, title: 'title', text: 'text') }
-    
+
   before { post.save }
 
   context 'When testing the Posts class' do
@@ -19,21 +19,22 @@ RSpec.describe Post do
       expect(post.text).to eq('text')
     end
   end
-  
-  context 'When testing the Posts methods' do 
-      user1 = User.create(name: 'John Doe', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Teacher from Canada.')
-      post1 = Post.create(author: user1, title: 'title', text: 'text')
-      comment1 = Comment.create(author: user1, post: post1, text: 'text1')
-      comment2 = Comment.create(author: user1, post: post1, text: 'text2')
-      comment3 = Comment.create(author: user1, post: post1, text: 'text3')
-      comment4 = Comment.create(author: user1, post: post1, text: 'text4')
-      comment5 = Comment.create(author: user1, post: post1, text: 'text5')
-      comment6 = Comment.create(author: user1, post: post1, text: 'text6')
+
+  context 'When testing the Posts methods' do
+    user1 = User.create(name: 'John Doe', photo: 'https://unsplash.com/photos/F_-0BxGuVvo',
+                        bio: 'Teacher from Canada.')
+    post1 = Post.create(author: user1, title: 'title', text: 'text')
+    comment1 = Comment.create(author: user1, post: post1, text: 'text1')
+    comment2 = Comment.create(author: user1, post: post1, text: 'text2')
+    comment3 = Comment.create(author: user1, post: post1, text: 'text3')
+    comment4 = Comment.create(author: user1, post: post1, text: 'text4')
+    comment5 = Comment.create(author: user1, post: post1, text: 'text5')
+    comment6 = Comment.create(author: user1, post: post1, text: 'text6')
 
     it 'should return the lenght of comments in comments_counter' do
       expect(post1.recent_comments.length).to eq(5)
     end
-    
+
     it 'should update post countersr' do
       post1.save
       expect(user1.posts_counter).to eq(1)
