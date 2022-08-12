@@ -1,14 +1,27 @@
 require 'rails_helper'
 
 RSpec.describe Comment do
-  let(:comment) { Comment.create(author: 'John Doe', post: 'post', text: 'comment text') }
+  let(:user) { User.create(name: 'name', photo: 'photo', bio: 'bio')}
+  let(:post) { Post.create(author: user, title: 'title', text: 'post text') }
+  let(:comment) { Comment.create(author: user, post: post, text: 'comment text') }
 
-  fcontext 'When testing the Comment class' do
-    it 'should contain an author' 
-    it 'should contain a post'
-  end
+  context 'When testing the Comment class' do
+    before do
+      user.save
+      post.save
+      comment.save
+    end
 
-  fcontext 'When testing the Comment method' do
-    it 'should increase coments counter'
+    it 'should contain an author' do
+      expect(comment).to have_attributes(author: user)
+    end
+
+    it 'should contain a post' do
+      expect(comment).to have_attributes(post: post)
+    end
+  
+    it 'should update comments counter' do
+      expect(post.comments_counter).to eq(1)
+    end
   end
 end

@@ -1,6 +1,4 @@
 require 'rails_helper'
-require_relative '../app/models/user'
-require_relative '../app/models/comment'
 
 RSpec.describe Post do
   let(:user) { User.new(name: 'John Doe', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Teacher from Canada.')}
