@@ -42,7 +42,7 @@ RSpec.describe Post do
     end
   end
 
-  fcontext 'When testing Validations' do
+  context 'When testing Validations' do
     it 'should validate that title isn\'t empty' do
       post.title = nil
       expect(post).not_to be_valid
