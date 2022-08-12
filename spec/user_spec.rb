@@ -39,18 +39,13 @@ RSpec.describe User do
 
   context 'When testing Validations' do
     it 'should validate that name isn\'t empty' do
-      user1 = User.new(name: '', photo: 'photography source', bio: 'biography')
-      espect(user1.name.valid?).not_to be(true)
+      user.name = nil
+      expect(user).not_to be_valid
     end
 
     it 'should validate that PostsCounter must be an integer greater than or equal to zero.' do
-      user2 = User.new(name: 'John Doe', photo: 'photography source', bio: 'biography', posts_counter: 'a')
-      expect(user2.posts_counter.valid?).not_to be(true)
-    end
-  
-    it 'should validate presence of bio' do
-      user3 = User.new(name: 'John Doe', photo: 'photography source', bio: '')
-      expect(user3.bio.valid?).not_to be(true)
+      user.posts_counter = -3
+      expect(user).not_to be_valid
     end
   end
 end
