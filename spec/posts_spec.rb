@@ -22,7 +22,7 @@ RSpec.describe Post do
     end
   end
   
-  fcontext 'When testing the Posts methods' do 
+  context 'When testing the Posts methods' do 
       user1 = User.create(name: 'John Doe', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Teacher from Canada.')
       post1 = Post.create(author: user1, title: 'title', text: 'text')
       comment1 = Comment.create(author: user1, post: post1, text: 'text1')
@@ -42,10 +42,25 @@ RSpec.describe Post do
     end
   end
 
-  context 'When testing Validations' do
-    it 'should validate that title isn\'t empty' 
-    it 'should validate that title doesn\'t exceed 250 characters'
-    it 'should validate that CommentsCounter must be an integer greater than or equal to zero.'
-    it 'should validate that LikesCounter must be an integer greater than or equal to zero.'
+  fcontext 'When testing Validations' do
+    it 'should validate that title isn\'t empty' do
+      post.title = nil
+      expect(post).not_to be_valid
+    end
+
+    it 'should validate that title doesn\'t exceed 250 characters' do
+      post.title = 'a' * 260
+      expect(post).not_to be_valid
+    end
+
+    it 'should validate that CommentsCounter must be an integer greater than or equal to zero.' do
+      post.comments_counter = -3
+      expect(post).not_to be_valid
+    end
+
+    it 'should validate that LikesCounter must be an integer greater than or equal to zero.' do
+      post.likes_counter = -2
+      expect(post).not_to be_valid
+    end
   end
 end
