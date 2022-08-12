@@ -1,21 +1,45 @@
 require 'rails_helper'
-require_relative '../app/models/post'
+require_relative '../app/models/user'
+require_relative '../app/models/comment'
 
 RSpec.describe Post do
   let(:user) { User.new(name: 'John Doe', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Teacher from Canada.')}
-  let(:posts) { Post.create(author: user, title: 'title', text: 'text') }
+  let(:post) { Post.create(author: user, title: 'title', text: 'text') }
     
-  before { posts.save }
+  before { post.save }
 
   context 'When testing the Posts class' do
-    it 'should contain an author'    
-    it 'should contain a title' 
-    it 'should contain a text'
-  end
+    it 'should contain an author' do
+      expect(post.author).to eq(user)
+    end
 
-  context 'When testing the Posts methods' do        
-    it 'should return an array of comments with a maximum of 5 items'
-    it 'should return the lenght of comments in comments_counter'
+    it 'should contain a title' do
+      expect(post.title).to eq('title')
+    end
+
+    it 'should contain a text' do
+      expect(post.text).to eq('text')
+    end
+  end
+  
+  fcontext 'When testing the Posts methods' do 
+      user1 = User.create(name: 'John Doe', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Teacher from Canada.')
+      post1 = Post.create(author: user1, title: 'title', text: 'text')
+      comment1 = Comment.create(author: user1, post: post1, text: 'text1')
+      comment2 = Comment.create(author: user1, post: post1, text: 'text2')
+      comment3 = Comment.create(author: user1, post: post1, text: 'text3')
+      comment4 = Comment.create(author: user1, post: post1, text: 'text4')
+      comment5 = Comment.create(author: user1, post: post1, text: 'text5')
+      comment6 = Comment.create(author: user1, post: post1, text: 'text6')
+
+    it 'should return the lenght of comments in comments_counter' do
+      expect(post1.recent_comments.length).to eq(5)
+    end
+    
+    it 'should update post countersr' do
+      post1.save
+      expect(user1.posts_counter).to eq(1)
+    end
   end
 
   context 'When testing Validations' do
