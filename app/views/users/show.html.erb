@@ -5,9 +5,7 @@
 </div>
 <div class= "posts-container">
   <%= render @user.recent_posts %>
-    
-</div>
-
-<%= link_to user_posts_path(@user.id) do %>
+  <%= link_to user_posts_path(@user.id) do %>
       <button type="button">See All</button>
-<%end%>
+  <%end%>
+</div>
