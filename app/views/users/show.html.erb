@@ -4,11 +4,10 @@
   <p><%= @user.bio %></p>
 </div>
 <div class= "posts-container">
-  <% @user.posts.each do |post| %>
-    <div class= "post">
-      <h4><%= post.title %> - Id: <%= post.id %></h4>
-      <p><%= post.text %></p>
-      <h5>Comments: <%= post.comments_counter %> - Likes: <%= post.likes_counter %></h5>
-    </div>
-  <% end %>
+  <%= render @user.recent_posts %>
+    
 </div>
+
+<%= link_to user_posts_path(@user.id) do %>
+      <button type="button">See All</button>
+<%end%>
