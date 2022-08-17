@@ -1,2 +1,14 @@
-<h3>Names of the required author is:</h3>
-<strong><%= @user.name %></strong>
+<%= render @user %>
+<div class= "bio">
+  <h3>Bio</h3>
+  <p><%= @user.bio %></p>
+</div>
+<div class= "posts-container">
+  <% @user.posts.each do |post| %>
+    <div class= "post">
+      <h4><%= post.title %> - Id: <%= post.id %></h4>
+      <p><%= post.text %></p>
+      <h5>Comments: <%= post.comments_counter %> - Likes: <%= post.likes_counter %></h5>
+    </div>
+  <% end %>
+</div>
