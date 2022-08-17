@@ -13,3 +13,47 @@
  *= require_tree .
  *= require_self
  */
+.container {
+  display: flex;
+  align-items: center;
+}
+
+.user {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #000;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding: 1em;
+  width: 80%;
+  margin: 1em;
+}
+
+.user p {
+    align-self: flex-end;
+}
+
+.photo {
+    width: 100px;
+    height: 100px;
+    border: 1px solid #000;
+    margin-right: 1em;
+}
+
+.bio {
+    border: 1px solid #000;
+    padding: 1em;
+    width: 95%;
+}
+
+.post {
+    display:flex;
+    flex-direction: column;
+    border: 1px solid #000;
+    padding: 1em;
+    width: 95%;
+    margin: 1em 0;
+}
+
+.post h5 {
+    align-self: flex-end;
+}
