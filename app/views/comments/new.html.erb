@@ -1,0 +1,5 @@
+<% form_with model: [:user, :post, @comment] do |f| %> <%# ask for url %>
+    <%= f.label :text %>
+    <%= f.text_area :text %>
+    <%= f.submit "Add new Comment" %>
+<% end %> 
