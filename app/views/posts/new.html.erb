@@ -1,0 +1,7 @@
+<% form_with model: newpost, url: user_posts_path, method: :post, local: true do |f| %> <%# ask for scope %>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+    <%= f.label :text %>
+    <%= f.text_area :text %>
+    <%= f.submit "Add new Post" %>
+<% end %> 
