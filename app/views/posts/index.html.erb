@@ -1,4 +1,5 @@
 <%= render 'users/user', user: @user %>
 <div class= "posts-container">
-  <%= render partial: @posts  , spacer_template: 'posts/comments', coments: @comments %>
+  <%= render @posts  %>
+  <button>Pagination</button>
 </div>

@@ -1,5 +1,27 @@
-<div class= "post">
-    <h4><%= post.title %> - Id: <%= post.id %></h4>
+<% if current_page? user_post_path(post.author.id, post.id) %>
+  <div class="post">
+  <div class="title">
+    <h4><%= post.title %> by <%= link_to(user_path(post.author.id)) { post.author.name } %></h4> 
+    <h5>Comments: <%= post.comments_counter || 0 %> - Likes: <%= post.likes_counter || 0 %></h5>
+  </div>
     <p><%= post.text %></p>
-    <h5>Comments: <%= post.comments_counter %> - Likes: <%= post.likes_counter %></h5>
-</div>
+  </div>
+  <% if !@comments.nil? %>
+    <div class="comments">
+      <%= render @post.comments %>
+    </div>
+  <% end %>
+<% else %>
+    
+    <div class= "post">
+        <h4><%= link_to(user_post_path(post.author.id, post.id)) { post.title } %> - Id: <%= post.id %></h4>
+        <p><%= post.text[0..150] %>...</p>
+        <h5>Comments: <%= post.comments_counter || 0 %> - Likes: <%= post.likes_counter || 0 %></h5>
+    </div>
+    
+   <% unless @comments.nil? %>
+        <div class="comments">
+            <%= render @post.comments.last(5) %>
+        </div>
+    <% end %>
+<% end %>
