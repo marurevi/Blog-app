@@ -13,9 +13,6 @@ class PostsController < ApplicationController
     @post = Post.new
     @user = current_user
 
-    respond_to do |format|
-      format.html { render :new, locals: { newpost: newpost } }
-    end
   end
 
   def create

@@ -105,3 +105,20 @@ button {
   justify-content: space-between;
   align-content: center;
 }
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 1em;
+}
+
+.form-container > * {
+  padding: 0.8em;
+  border-radius: 12px;
+  margin: 0.8em;
+  width: 15vw;
+}
+
