@@ -97,7 +97,22 @@
 button {
   padding: 0.8em;
   border-radius: 12px;
-  width: 15vw;
+  color: #fff;
+  background-color: #000;
+  width: max-content;
+  margin: 1em;
+}
+
+button > * {
+  color: #fff;
+  text-decoration: none;
+}
+
+.buttons-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 1em;
 }
 
 .title {
@@ -111,14 +126,20 @@ button {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  margin: 1em;
+  text-align: center;
 }
 
 .form-container > * {
   padding: 0.8em;
-  border-radius: 12px;
-  margin: 0.8em;
-  width: 15vw;
+  margin: 0.3em;
+  width: 80%;
 }
 
+.form-container input:last-child {
+  width: max-content;
+  margin-top: 1em;
+  border-radius: 12px;
+  border: 1px solid #000;
+  color: #fff;
+  background-color: #000;
+}

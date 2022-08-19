@@ -1,5 +1,8 @@
-<% form_with model: [:user, :post, @comment] do |f| %> <%# ask for url %>
+<div class="form-container">
+  <h3>Comments Form:</h3>
+  <%= form_with model: @comment, url: user_post_comments_path,  method: :post, local: true, class: "form-container"  do |f| %> <%# ask for url %>
     <%= f.label :text %>
     <%= f.text_area :text %>
     <%= f.submit "Add new Comment" %>
-<% end %> 
+  <% end %> 
+</div>
