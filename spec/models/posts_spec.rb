@@ -24,13 +24,12 @@ RSpec.describe Post do
   end
 
   context 'When testing the Posts methods' do
-    
     it 'should update post counter' do
       expect(user.posts_counter).to eq(1)
     end
 
     it 'should return the lenght of comments in comments_counter' do
-      comment1 = Comment.create(author: user, post: post, text: 'text1').save
+      comment1 = Comment.create(author: user, post:, text: 'text1').save
       expect(post.recent_comments.count).to eq(1)
     end
   end
