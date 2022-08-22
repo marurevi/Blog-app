@@ -16,7 +16,7 @@ RSpec.describe 'Posts', type: :request do
     end
 
     it 'should assert the content of the response body' do
-      expect(response.body).to include('<h3>Posts:</h3>')
+      expect(response.body).to include('<div class="photo">')
     end
   end
 
@@ -34,7 +34,7 @@ RSpec.describe 'Posts', type: :request do
     end
 
     it 'should assert the content of the response body' do
-      expect(response.body).to include('<h4>The required post is:</h4>')
+      expect(response.body).to include('<div class="title">')
     end
   end
 end
