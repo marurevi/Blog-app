@@ -6,3 +6,4 @@
     <%= f.submit "Add new Post" %>
   <% end %>
 </div>
+<% flash.each do |type, msg| %><div><%= msg %></div><% end %>

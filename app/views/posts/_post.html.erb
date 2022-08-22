@@ -12,7 +12,7 @@
   </div>
   <% if post.comments_counter > 0 %>
     <div class="comments">
-      <%= render @post.comments %>
+      <%= render @post.all_comments %>
     </div>
   <% end %>
 <% else %>

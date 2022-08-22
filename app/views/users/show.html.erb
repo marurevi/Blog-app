@@ -10,5 +10,6 @@
         <button type="button">See All</button>
     <%end%>
     <button type="button"><%= link_to "New Post", new_user_post_path(@user.id) %></button>
+    <% flash.each do |type, msg| %><div><%= msg %></div><% end %>
   </div>
 </div>
