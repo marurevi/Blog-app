@@ -3,13 +3,11 @@ class Post < ApplicationRecord
   has_many :comments, dependent: :destroy
   has_many :likes, dependent: :destroy
 
-
   after_save :update_posts_counter
 
   def all_comments
     comments.includes([:author]).order(created_at: :desc)
   end
-
 
   def recent_comments
     all_comments.limit(5)
