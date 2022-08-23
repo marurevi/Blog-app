@@ -31,7 +31,7 @@ RSpec.describe 'User index', type: :feature do
   end
 
   it 'should redirect to users page when I click on the user name' do
-    click_on 'Tom - 1'
-    expect(page).to have_current_path(user_path(1))
+    click_on "#{User.first.name}"
+    expect(page).to have_current_path(user_path(User.first.id))
   end
 end
