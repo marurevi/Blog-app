@@ -95,6 +95,12 @@ bin/rspec
 - Twitter: [@MaruRevilla](https://twitter.com/MaruRevilla)
 - LinkedIn: [Mariana-Revilla-Lérida](https://linkedin.com/in/mariana-revilla-l%C3%A9rida-a12aba143)
 
+👤 **Adaobi Vivian Okoye**
+
+- GitHub: [@githubhandle](https://github.com/adanzeakonobi) 
+- Twitter: [@twitterhandle](https://twitter.com/Adaebubemmuta)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/okoyeaadaobi)
+
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
