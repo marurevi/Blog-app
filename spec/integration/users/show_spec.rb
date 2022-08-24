@@ -31,12 +31,12 @@ RSpec.describe 'User show', type: :feature do
   it "should show a button that lets me view all of a user's posts" do
     expect(page).to have_content('See All')
   end
-  it "should , redirects to the post's index page when I click on a user's post" do
+  it "should redirects to the post's index page when I click on a user's post" do
      
     click_on 'Lilly'
     expect(page).to have_current_path user_path(User.second.id)
   end
-  it "should , redirects to the post's show page when I click on the button 'See all posts'" do
+  it "should redirects to the post's show page when I click on the button 'See all posts'" do
     click_on 'See All'
     expect(page).to have_current_path user_posts_path(User.second.id)
   end
