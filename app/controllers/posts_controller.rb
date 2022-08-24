@@ -22,7 +22,7 @@ class PostsController < ApplicationController
       flash[:success] = 'Post created!'
       redirect_to user_post_path(current_user, @post)
     else
-      flash[:error] = 'Post not created! Try again.'
+      flash.now[:error] = 'Post not created! Try again.'
       render :new
     end
   end
