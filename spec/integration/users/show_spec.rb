@@ -1,12 +1,10 @@
 require 'rails_helper'
 
 RSpec.describe 'User show', type: :feature do
-    
   before(:example) do
     Rails.application.load_seed
     visit user_path(User.second.id)
   end
-  
 
   it "should show the user's profile picture" do
     expect(page).to have_css("img[src*='Lilly']")
@@ -16,7 +14,7 @@ RSpec.describe 'User show', type: :feature do
     expect(page).to have_content('Lilly')
   end
 
-  it "should show the number of posts the user has written" do
+  it 'should show the number of posts the user has written' do
     expect(page).to have_content('Number of posts: 5')
   end
 
@@ -32,7 +30,6 @@ RSpec.describe 'User show', type: :feature do
     expect(page).to have_content('See All')
   end
   it "should redirects to the post's index page when I click on a user's post" do
-     
     click_on 'Lilly'
     expect(page).to have_current_path user_path(User.second.id)
   end
