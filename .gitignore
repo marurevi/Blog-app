@@ -21,6 +21,9 @@ spec/examples.txt
 !/tmp/pids/
 !/tmp/pids/.keep
 
+# Ignore node_modules
+/node_modules
+
 # Ignore uploaded files in development.
 /storage/*
 !/storage/.keep
