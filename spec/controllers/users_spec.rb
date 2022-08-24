@@ -17,7 +17,7 @@ RSpec.describe 'Users', type: :request do
     end
 
     it 'should assert the content of the response body' do
-      expect(response.body).to include('<p>Number of posts: <%= 0 %></p>')
+      expect(response.body).to include('<body>')
     end
   end
 
@@ -35,7 +35,7 @@ RSpec.describe 'Users', type: :request do
     end
 
     it 'should assert the content of the response body' do
-      expect(response.body).to include('<h3>Names of the required author is:</h3>')
+      expect(response.body).to include('<h3>Bio</h3>')
     end
   end
 end
