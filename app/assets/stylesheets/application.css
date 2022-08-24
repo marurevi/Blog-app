@@ -108,7 +108,8 @@
   margin: 1em;
 }
 
-button, .btn {
+button,
+.btn {
   padding: 0.8em;
   border-radius: 12px;
   color: #fff;
@@ -117,7 +118,8 @@ button, .btn {
   margin: 1em;
 }
 
-button > *, .btn > * {
+button > *,
+.btn > * {
   color: #fff;
   text-decoration: none;
 }
