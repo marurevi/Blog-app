@@ -80,5 +80,4 @@ group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
 end
 
-gem "gem", "~> 0.0.1.alpha"
-gem "letter_opener", group: :development
+gem 'letter_opener', group: :development
