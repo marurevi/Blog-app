@@ -22,9 +22,23 @@
   color: #000;
 }
 
-.body {
-  opacity: 0.7;
-  background: repeating-linear-gradient(45deg, #f2e9b6, #f2e9b6 6px, #7b796b 6px, #7b796b 30px);
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 20px;
+  margin-bottom: 1em;
+  height: 60px;
+  width: 100%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .container {
