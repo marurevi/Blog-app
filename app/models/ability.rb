@@ -12,8 +12,12 @@ class Ability
     can    :manage , Article
     cannot :manage , Comment
     can    :read   , Tag , released: true
-  end
 
+    return unless user.present?  # additional permissions for logged in users (they can read their own posts)
+    can :read, Post, user: user
 
+    return unless user.admin?  # additional permissions for administrators
+    can :read, Post
   end
+  
 end

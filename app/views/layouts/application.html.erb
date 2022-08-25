@@ -12,10 +12,7 @@
 
   <body>
     <div class="nav">
-     
-      <% unless current_page == root_path do %>
-        <%= button_to "Home", root_path, method: :get %> 
-      <% end %>
+      <%= button_to "Home", root_path, method: :get %> 
       <% if user_signed_in? %>
         <%= button_to "Logout", destroy_user_session_path, method: :delete, data: { turbo: false } %>
       <% end %>
