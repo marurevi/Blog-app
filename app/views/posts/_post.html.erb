@@ -7,6 +7,7 @@
     <p><%= post.text %></p>
   </div>
   <div class= "buttons-container">
+  <button type="button"><%= link_to 'Delete post', user_post_path(post.author.id, post.id), :method => delete %></button>
     <button type="button"><%= link_to 'Add Comment', new_user_post_comment_path(post.author.id, post.id) %></button>
     <%= button_to 'Like', user_post_likes_path(post.author.id, post.id)  %>
   </div>
