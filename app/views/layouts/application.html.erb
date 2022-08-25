@@ -12,10 +12,13 @@
 
   <body>
     <div class="nav">
-      <% unless root_path %>
-        <%= button_to "Home", root_path, method: :get %>
+     
+      <% unless current_page == root_path do %>
+        <%= button_to "Home", root_path, method: :get %> 
       <% end %>
-      <%= button_to "Logout", destroy_user_session_path, method: :delete, data: { turbo: false } %>
+      <% if user_signed_in? %>
+        <%= button_to "Logout", destroy_user_session_path, method: :delete, data: { turbo: false } %>
+      <% end %>
     </div>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
