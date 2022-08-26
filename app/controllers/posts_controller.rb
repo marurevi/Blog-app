@@ -1,4 +1,6 @@
 class PostsController < ApplicationController
+  load_and_authorize_resource
+
   def index
     @user = User.find(params[:user_id])
     @posts = @user.all_posts
@@ -28,16 +30,14 @@ class PostsController < ApplicationController
   end
 
   def destroy
-    @user = current_user
-    @post = Post.find(params[:id])
-    authorize! :destroy, @post
-
+    @post.destroy
+    
     if @post.destroy
       flash[:success] = 'Post deleted!'
-      redirect_to user_post_path(current_user, @post)
+      redirect_to request.referrer
     else
-      flash.now[:error] = 'Post not deleted! Try again'
-      render :new
+      flash[:error] = 'Post not deleted!'
+      redirect_to request.referrer
     end
   end
 
