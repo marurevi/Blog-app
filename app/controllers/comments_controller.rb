@@ -24,7 +24,7 @@ class CommentsController < ApplicationController
     user_id = post.author_id
     id = @comment.post_id
     @comment.destroy
-    
+
     redirect_to user_post_path(user_id, id)
   end
 
