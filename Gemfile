@@ -87,3 +87,5 @@ gem 'cancancan', '~> 3.4'
 gem 'bootstrap-sass', '~> 3.4'
 
 gem 'font-awesome-sass', '~> 6.1'
+
+gem "devise-jwt", "~> 0.9.0"
