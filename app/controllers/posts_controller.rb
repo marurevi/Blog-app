@@ -18,11 +18,12 @@ class PostsController < ApplicationController
 
   def create
     @user = current_user
-    @post = @current_user.posts.new(post_params)
+    @post = @user.posts.new(post_params)
+    @post.save
 
     if @post.save
       flash[:success] = 'Post created!'
-      redirect_to user_post_path(current_user, @post)
+      redirect_to user_post_path(@user.id, @post.id)
     else
       flash.now[:error] = 'Post not created! Try again.'
       render :new
@@ -31,14 +32,13 @@ class PostsController < ApplicationController
 
   def destroy
     @post.destroy
-    
+
     if @post.destroy
       flash[:success] = 'Post deleted!'
-      redirect_to request.referrer
     else
       flash[:error] = 'Post not deleted!'
-      redirect_to request.referrer
     end
+    redirect_to request.referrer
   end
 
   private

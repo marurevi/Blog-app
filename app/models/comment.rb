@@ -3,6 +3,7 @@ class Comment < ApplicationRecord
   belongs_to :post
 
   after_save :update_comments_counter
+  after_destroy :update_comments_counter
 
   validates :text, presence: true, allow_blank: false, length: { maximum: 250 }
 

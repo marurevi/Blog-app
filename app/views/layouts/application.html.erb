@@ -13,9 +13,8 @@
   <body>
     <div class="nav">
       <%= button_to "Home", root_path, method: :get %> 
-      <% if user_signed_in? %>
-        <%= button_to "Logout", destroy_user_session_path, method: :delete, data: { turbo: false } %>
-      <% end %>
+      <%= button_to "Logout", destroy_user_session_path, method: :delete, data: { turbo: false } %>
+      
     </div>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>

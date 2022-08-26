@@ -82,8 +82,8 @@ end
 
 gem 'letter_opener', group: :development
 
-gem "cancancan", "~> 3.4"
+gem 'cancancan', '~> 3.4'
 
-gem "bootstrap-sass", "~> 3.4"
+gem 'bootstrap-sass', '~> 3.4'
 
-gem "font-awesome-sass", "~> 6.1"
+gem 'font-awesome-sass', '~> 6.1'

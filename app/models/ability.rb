@@ -1,19 +1,17 @@
-# frozen_string_literal: true
-
 class Ability
   include CanCan::Ability
 
   def initialize(user)
-    
-    # Handle the case where we don't have a current_user i.e. the user is a guest
-    user ||= User.new
+    return unless user.present?
 
-    if user.role == 'admin'
-      can :manage, :all
-    else
-      can :read, :all
-      can :manage, Post, author_id: user.id
-    end
+    can :read, :all
+    can :create, :all
+    can :destroy, Post, author: user
+    can :destroy, Comment, author: user
+
+    return unless user.admin?
+
+    can :manage, :all
+    can :destroy, :all
   end
-  
 end
