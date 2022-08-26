@@ -1,4 +1,5 @@
 class CommentsController < ApplicationController
+  load_and_authorize_resource
   def new
     @comment = Comment.new
   end
@@ -16,6 +17,15 @@ class CommentsController < ApplicationController
       flash.now[:error] = 'Comment not created! Try again.'
       render :new
     end
+  end
+
+  def destroy
+    post = Post.find(params[:post_id])
+    user_id = post.author_id
+    id = @comment.post_id
+    @comment.destroy
+
+    redirect_to user_post_path(user_id, id)
   end
 
   private

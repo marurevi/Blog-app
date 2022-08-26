@@ -1,1 +1,5 @@
-<p>Username: <%= comment.author.name %> - Comment: <%= comment.text %></p>
+<p>Username: <%= comment.author.name %> - Comment: <%= comment.text %></p> 
+<%= button_to user_post_comment_path(comment.author_id, comment.post_id, comment.id), method: :delete, data: {turbo: false}  do %>
+    <i class="fa-solid fa-trash"></i>
+<% end %>
+

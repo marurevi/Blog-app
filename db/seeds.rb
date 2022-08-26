@@ -1,15 +1,27 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
-#   Character.create(name: "Luke", movie: movies.first)
-first_user = User.create(name: 'Tom', photo: 'https://robohash.org/Tom?set=set4', bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper a lacus vestibulum sed. Etiam sit amet nisl purus in. Arcu vitae elementum curabitur vitae nunc sed velit dignissim sodales..', posts_counter: 0)
-second_user = User.create(name: 'Lilly', photo: 'https://robohash.org/Lilly?set=set4', bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper a lacus vestibulum sed. Etiam sit amet nisl purus in. Arcu vitae elementum curabitur vitae nunc sed velit dignissim sodales..', posts_counter: 0)
-third_user = User.create(name: 'Jerry', photo: 'https://robohash.org/Jerry?set=set4', bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper a lacus vestibulum sed. Etiam sit amet nisl purus in. Arcu vitae elementum curabitur vitae nunc sed velit dignissim sodales..', posts_counter: 0)
-fourth_user = User.create(name: 'John', photo: 'https://robohash.org/John?set=set4', bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper a lacus vestibulum sed. Etiam sit amet nisl purus in. Arcu vitae elementum curabitur vitae nunc sed velit dignissim sodales..', posts_counter: 0)
-fifth_user = User.create(name: 'Jane', photo: 'https://robohash.org/Jane?set=set4', bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper a lacus vestibulum sed. Etiam sit amet nisl purus in. Arcu vitae elementum curabitur vitae nunc sed velit dignissim sodales..', posts_counter: 0)
+admin = User.create(name: 'admin', photo: 'https://robohash.org/Admin', bio: 'Admin', posts_counter: 0, created_at: nil, updated_at: nil, email: 'admin@email.com', role: 'admin')
+admin.password = '123456'
+admin.password_confirmation = '123456'
+admin.confirm
+first_user = User.create(name: 'Tom', photo: 'https://robohash.org/Tom?set=set4', bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper a lacus vestibulum sed. Etiam sit amet nisl purus in. Arcu vitae elementum curabitur vitae nunc sed velit dignissim sodales..', posts_counter: 0, created_at: nil, updated_at: nil, email:"Tom@email.com", role:"user")
+first_user.password = '123456'
+first_user.password_confirmation = '123456'
+first_user.confirm
+second_user = User.create(name: 'Lilly', photo: 'https://robohash.org/Lilly?set=set4', bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper a lacus vestibulum sed. Etiam sit amet nisl purus in. Arcu vitae elementum curabitur vitae nunc sed velit dignissim sodales..', posts_counter: 0, created_at: nil, updated_at: nil, email:"Lilly@email.com", role:"user")
+second_user.password = '123456'
+second_user.password_confirmation = '123456'
+second_user.confirm
+third_user = User.create(name: 'Jerry', photo: 'https://robohash.org/Jerry?set=set4', bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper a lacus vestibulum sed. Etiam sit amet nisl purus in. Arcu vitae elementum curabitur vitae nunc sed velit dignissim sodales..', posts_counter: 0, created_at: nil, updated_at: nil, email:"Jerry@email.com", role:"user")
+third_user.password = '123456'
+third_user.password_confirmation = '123456'
+third_user.confirm
+fourth_user = User.create(name: 'John', photo: 'https://robohash.org/John?set=set4', bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper a lacus vestibulum sed. Etiam sit amet nisl purus in. Arcu vitae elementum curabitur vitae nunc sed velit dignissim sodales..', posts_counter: 0, created_at: nil, updated_at: nil, email:"John@email.com", role:"user")
+fourth_user.password = '123456'
+fourth_user.password_confirmation = '123456'
+fourth_user.confirm
+fifth_user = User.create(name: 'Jane', photo: 'https://robohash.org/Jane?set=set4', bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper a lacus vestibulum sed. Etiam sit amet nisl purus in. Arcu vitae elementum curabitur vitae nunc sed velit dignissim sodales..', posts_counter: 0, created_at: nil, updated_at: nil, email:"Jane@email.com", role:"user")
+fifth_user.password = '123456'
+fifth_user.password_confirmation = '123456'
+fifth_user.confirm
 
 first_post = Post.create(author: first_user, title: 'Title 1', text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper a lacus vestibulum sed. Etiam sit amet nisl purus in. Arcu vitae elementum curabitur vitae nunc sed velit dignissim sodales. In aliquam sem fringilla ut morbi tincidunt augue interdum velit. In dictum non consectetur a erat nam. Dui nunc mattis enim ut tellus elementum sagittis vitae et. Ut porttitor leo a diam sollicitudin. Nunc non blandit massa enim nec dui nunc mattis. At urna condimentum mattis pellentesque. Nibh venenatis cras sed felis eget velit. Cursus risus at ultrices mi tempus imperdiet. Nisl nisi scelerisque eu ultrices vitae auctor eu augue. Risus feugiat in ante metus dictum at tempor commodo. Consectetur adipiscing elit ut aliquam purus sit amet luctus venenatis. Odio aenean sed adipiscing diam donec adipiscing tristique risus nec. Quis hendrerit dolor magna eget est lorem ipsum.', comments_counter: 0, likes_counter: 0)
 second_post = Post.create(author: first_user, title: 'Title 2', text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper a lacus vestibulum sed. Etiam sit amet nisl purus in. Arcu vitae elementum curabitur vitae nunc sed velit dignissim sodales. In aliquam sem fringilla ut morbi tincidunt augue interdum velit. In dictum non consectetur a erat nam. Dui nunc mattis enim ut tellus elementum sagittis vitae et. Ut porttitor leo a diam sollicitudin. Nunc non blandit massa enim nec dui nunc mattis. At urna condimentum mattis pellentesque. Nibh venenatis cras sed felis eget velit. Cursus risus at ultrices mi tempus imperdiet. Nisl nisi scelerisque eu ultrices vitae auctor eu augue. Risus feugiat in ante metus dictum at tempor commodo. Consectetur adipiscing elit ut aliquam purus sit amet luctus venenatis. Odio aenean sed adipiscing diam donec adipiscing tristique risus nec. Quis hendrerit dolor magna eget est lorem ipsum.', comments_counter: 0, likes_counter: 0)
