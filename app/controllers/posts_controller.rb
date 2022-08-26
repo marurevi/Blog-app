@@ -19,8 +19,7 @@ class PostsController < ApplicationController
   def create
     @user = current_user
     @post = @user.posts.new(post_params)
-    @post.save
-
+   
     if @post.save
       flash[:success] = 'Post created!'
       redirect_to user_post_path(@user.id, @post.id)
@@ -31,14 +30,9 @@ class PostsController < ApplicationController
   end
 
   def destroy
+    author_id = @post.author_id
     @post.destroy
-
-    if @post.destroy
-      flash[:success] = 'Post deleted!'
-    else
-      flash[:error] = 'Post not deleted!'
-    end
-    redirect_to request.referrer
+    redirect_to user_posts_path(author_id)
   end
 
   private

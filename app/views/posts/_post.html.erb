@@ -34,12 +34,7 @@
     
    <% if post.comments_counter > 0 %>
         <div class="comments">
-            <% post.recent_comments.each do |comment| %>
-              <p>Username: <%= comment.author.name %> - Comment: <%= comment.text %></p>
-              <%= link_to user_post_comment_path(comment.author_id, comment.post_id, comment.id), data: {turbo_method: :delete, turbo_confirm: 'Are you sure?'} do %>
-                <i class="fa-solid fa-trash"></i>
-              <% end %>
-            <% end %>
+            <%= render post.recent_comments %>
         </div>
     <% end %>
 <% end %>

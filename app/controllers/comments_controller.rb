@@ -10,8 +10,6 @@ class CommentsController < ApplicationController
     @comment.post = Post.find(params[:post_id])
     @author = User.find(params[:user_id])
 
-    @comment.save
-
     if @comment.save
       flash[:success] = 'Comment created!'
       redirect_to user_post_path(@author, @comment.post_id)
@@ -22,13 +20,12 @@ class CommentsController < ApplicationController
   end
 
   def destroy
+    post = Post.find(params[:post_id])
+    user_id = post.author_id
+    id = @comment.post_id
     @comment.destroy
-    if @comment.destroy
-      flash[:success] = 'Comment deleted!'
-    else
-      flash[:error] = 'Comment not deleted!'
-    end
-    redirect_to request.referrer
+    
+    redirect_to user_post_path(user_id, id)
   end
 
   private
