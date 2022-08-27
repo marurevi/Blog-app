@@ -47,7 +47,7 @@ gem 'bootsnap', require: false
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
-gem 'devise', '~> 4.8'
+gem 'devise'
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
@@ -61,6 +61,7 @@ group :development, :test do
   gem 'capybara'
   # The following gems aids with the nuts and bolts
   # of interacting with the browser.
+  gem 'dotenv-rails'
   gem 'selenium-webdriver'
   gem 'webdrivers'
 end
@@ -87,3 +88,7 @@ gem 'cancancan', '~> 3.4'
 gem 'bootstrap-sass', '~> 3.4'
 
 gem 'font-awesome-sass', '~> 6.1'
+
+gem 'devise-jwt'
+
+gem 'rack-cors'
