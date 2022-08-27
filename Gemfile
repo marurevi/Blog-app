@@ -61,9 +61,9 @@ group :development, :test do
   gem 'capybara'
   # The following gems aids with the nuts and bolts
   # of interacting with the browser.
+  gem 'dotenv-rails'
   gem 'selenium-webdriver'
   gem 'webdrivers'
-  gem 'dotenv-rails'
 end
 
 group :development do
@@ -89,6 +89,6 @@ gem 'bootstrap-sass', '~> 3.4'
 
 gem 'font-awesome-sass', '~> 6.1'
 
-gem "devise-jwt"
+gem 'devise-jwt'
 
 gem 'rack-cors'
